@@ -148,3 +148,57 @@ footer {
         margin: 10px auto;
     }
 }
+/* Style for the "Search for YouTube Videos" section */
+h3 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style for the search form */
+#video-search-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style for the search input */
+#video-search-input {
+    padding: 10px;
+    width: 60%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style for the search button */
+#video-search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Style for the search button on hover */
+#video-search-button:hover {
+    background-color: #e68300;
+}
+
+/* Style for the search results container */
+#video-search-results {
+    text-align: center;
+}
+
+/* Style for individual video cards (if needed) */
+.teacher-card {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
