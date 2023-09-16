@@ -36,6 +36,18 @@ nav {
 .nav-links li {
     margin-right: 20px;
 }
+/* Add this to your existing CSS */
+/* CSS to hide teacher details by default */
+.teacher-details {
+    display: none;
+  }
+  
+  /* CSS to show teacher details when 'show-details' class is applied */
+  .teacher-details.show-details {
+    display: block;
+  }
+  
+
 
 .nav-links a {
     text-decoration: none;

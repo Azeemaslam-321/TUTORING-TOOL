@@ -16,13 +16,15 @@ function logout() {
     document.getElementById("login-link").style.display = "block";
 }
 
-
 // JavaScript code for search.html (Search Page)
 document.addEventListener('DOMContentLoaded', function () {
+    const errorMessage = document.getElementById('error-message'); 
+
     document.getElementById('search-button').addEventListener('click', function () {
         const searchTopic = document.getElementById('search-topic').value;
         if (searchTopic === "") {
-            alert("Please enter a topic");
+            errorMessage.textContent = "Please enter a topic"; 
+            return;
         } else {
             // Simulated teacher data (replace this with actual data from your database)
             const teachers = [
@@ -52,73 +54,20 @@ document.addEventListener('DOMContentLoaded', function () {
                         <p>${teacher.description}</p>
                         <button class="learn-more-button" onclick="toggleDetails(this)">Learn More</button>
                         <div class="teacher-details">
-                            <p>${teacher.description}</p>
+                            <p>Contact: ${teacher.email}</p>
+                            <p>Phone: ${teacher.phone}</p>
                             <!-- Add more teacher details here -->
                         </div>
                     `;
                     teacherList.appendChild(teacherCard);
                 });
-            }
+            }   
         }
     });
 });
 
-
-// JavaScript code for profile.html (Profile Page)
-function loadUserProfile() {
-    // Simulate loading a user's profile data
-    const userProfileData = {
-        username: 'JohnDoe',
-        email: 'john.doe@email.com',
-        // Add more user profile data here
-    };
-
-    const userProfileContainer = document.getElementById('user-profile');
-
-    // Clear any previous profile information
-    userProfileContainer.innerHTML = '';
-
-    // Display user profile information
-    const usernameElement = document.createElement('p');
-    usernameElement.textContent = `Username: ${userProfileData.username}`;
-
-    const emailElement = document.createElement('p');
-    emailElement.textContent = `Email: ${userProfileData.email}`;
-
-    // Add more profile information elements as needed
-
-    userProfileContainer.appendChild(usernameElement);
-    userProfileContainer.appendChild(emailElement);
-    // Append additional profile information elements here
-}
-
-// Call the loadUserProfile function when the profile page is loaded
-window.addEventListener('DOMContentLoaded', function () {
-    if (document.URL.includes('profile.html')) {
-        // Load user profile when the profile page is loaded
-        loadUserProfile();
-    }
-});
-
+// Add this function to toggle teacher details
 function toggleDetails(button) {
-    const details = button.nextElementSibling; // Get the sibling div for details
-    details.classList.toggle('show-details'); // Toggle the visibility
-}
-
-// JavaScript for responsive navigation menu
-const menuButton = document.querySelector('.menu-button');
-const navMenu = document.querySelector('.nav-links');
-
-// Toggle the "active" class on the menu button and menu when clicked
-menuButton.addEventListener('click', function () {
-    menuButton.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
-function toggleDetails(button) {
-    var detailsDiv = button.nextElementSibling;
-    if (detailsDiv.style.display === "block" || detailsDiv.style.display === "") {
-        detailsDiv.style.display = "none";
-    } else {
-        detailsDiv.style.display = "block";
-    }
+    const details = button.nextElementSibling;
+    details.classList.toggle('show-details');
 }

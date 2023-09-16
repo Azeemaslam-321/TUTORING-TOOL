@@ -1,0 +1,83 @@
+/* Reset some default styles */
+body, div, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Chat Container */
+.chat-container {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Chat History (Message Display) */
+.chat-history {
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Chatbot Response Styling */
+.chatbot-response {
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 10px;
+    padding: 8px 12px;
+    max-width: 70%;
+    word-wrap: break-word;
+    margin-left: auto;
+    margin-right: 10px; /* To provide some spacing from the right side */
+}
+
+/* User and Bot Message Styling */
+.user, .bot {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 10px;
+    padding: 8px 12px;
+    max-width: 70%;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.user {
+    text-align: right;
+    margin-left: auto;
+    margin-right: 10px; /* To provide some spacing from the right side */
+}
+
+.bot {
+    text-align: left;
+    margin-right: auto;
+    margin-left: 10px; /* To provide some spacing from the left side */
+}
+
+/* Input Box and Send Button Styling */
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #e0e0e0;
+}
+
+#user-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#send-button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
