@@ -6,11 +6,14 @@
         <title>Online Learning Platform</title>
         <script src="https://apis.google.com/js/api.js"></script>
 
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./style1.css">
+
         <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-            integrity="sha384-LZCrDKfz3j7O3Jc5zG5C1rzoEvWf7A5kSlNeb1+RoXbO+4Wdok5f5OekgVFEbFTRF"
-            crossorigin="anonymous">
+            href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <link rel="stylesheet" href="chatbot.css">
+
+        <!-- Include your chatbot.js script -->
+        <script src="chatbot.js"></script>
     </head>
     <body>
         <header>
@@ -23,71 +26,54 @@
                 <div class="bar"></div>
             </div>
             <ul class="nav-links">
-                <li><a href="home.html">Home</a></li>
+                <li class="homee" style="padding-left: 20px;"><a
+                        href="./home.html">Search Teacher</a></li>
                 <li><a href="search.html">Search Courses</a></li>
                 <li><a href="profile.html">Profile</a></li>
-                <li><a href="chatbot.html">Chatbot</a></li>
+                <li><a href="chatbot.html"></a></li>
+                <li><a href>E-Content</a></li>
                 <li id="logout-link"><a href="#" onclick="logout()"><i
                             class="fas fa-sign-out-alt"></i> Logout</a></li>
-                <li id="login-link"><a href="#" onclick="login()"><i
-                            class="fas fa-sign-in-alt"></i> Login</a></li>
+                <!-- <li id="login-link"><a href="#" onclick="login()"><i
+                            class="fas fa-sign-in-alt"></i> Login</a></li> -->
 
             </ul>
         </nav>
-        <section id="search-section">
-            <h2>Find a Teacher</h2>
+        <section id="home-content">
+            <h2>Discover a World of Knowledge</h2>
+            <p>Unlock Your Potential with Lifelong Learning</p>
+            <p>At the Online Learning Platform, we believe that learning is a
+                journey that never ends. Whether you're a student, a
+                professional, or simply curious, our platform is your gateway to
+                a world of knowledge and growth.</p>
+            <p>Why Choose Us?</p>
+            <ul>
+                <li>Explore a Wide Range of Courses: From mathematics to art
+                    history, we offer a diverse selection of courses to cater to
+                    your interests and goals.</li>
+                <li>Connect with Inspiring Educators: Our passionate and
+                    experienced teachers are here to guide you on your learning
+                    journey.</li>
+                <li>Flexible Learning: Learn at your own pace, whenever and
+                    wherever you want. Your education, your way.</li>
+                <li>Community and Support: Join a vibrant community of learners,
+                    share your insights, and get the support you need.</li>
+            </ul>
+            <p>Start Your Learning Adventure Today</p>
+            <p>Don't wait to embark on your educational adventure. Sign up now,
+                explore our courses, and take the first step towards a brighter
+                future.</p>
             <br>
-            <input type="text" id="search-topic" placeholder="Enter a topic...">
-            <button id="search-button">Search</button>
-        </section>
-
-        <section id="teacher-list">
-
-            <div class="teacher-card">
-                <h3>Mr. John Smith</h3>
-                <p>Subject: Mathematics</p>
-                <p>Rating: 4.7</p>
-                <p>Description: I have 10 years of experience in teaching
-                    mathematics. I love making math easy and engaging for my
-                    students.</p>
-                <button class="learn-more-button" onclick="toggleDetails(this)">Learn
-                    More</button>
-                <div class="teacher-details">
-                    <p>Contact: john.smith@email.com</p>
-                    <p>Phone: +1 (123) 456-7890</p>
-                </div>
+            <div id="chatbot-container" style="display: none;">
+                <!-- Chatbot content here -->
             </div>
 
-            <div class="teacher-card">
-                <h3>Dr. Jane Doe</h3>
-                <p>Subject: Science</p>
-                <p>Rating: 4.9</p>
-                <p>Description: I hold a Ph.D. in Chemistry and have a passion
-                    for teaching science. Let's explore the wonders of the
-                    natural world together!</p>
-                <button class="learn-more-button" onclick="toggleDetails(this)">Learn
-                    More</button>
-                <div class="teacher-details show-details">
-                    <!-- Initially hidden with the "show-details" class -->
-                    <p>Contact: jane.doe@email.com</p>
-                    <p>Phone: +1 (987) 654-3210</p>
-                </div>
+            <div class="chatbot-icon" id="chatbot-icon">
+                <a href="./chatbot.html" onclick="toggleChatbot()">
+                    <i class="fas fa-comments"></i>
+                </a>
             </div>
-
-            <div class="teacher-card">
-                <h3>Ms. Emily Johnson</h3>
-                <p>Subject: English Literature</p>
-                <p>Rating: 4.6</p>
-                <p>Description: I'm passionate about literature and love helping
-                    students discover the beauty of written words. Let's dive
-                    into the world of classics!</p>
-                <button class="learn-more-button" onclick="toggleDetails(this)">Learn
-                    More</button>
-                <div class="teacher-details">
-                    <p>Contact: emily.johnson@email.com</p>
-                    <p>Phone: +1 (555) 123-4567</p>
-                </div>
-            </div>
+            <a class="cta-button" href="./search.html">Explore Courses</a>
         </section>
 
         <footer>

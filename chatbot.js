@@ -1,6 +1,6 @@
 const userInput = document.getElementById("user-input");
 const chatHistory = document.getElementById("chat-history");
-const chatbotImage = document.getElementById("chatbot-image");
+// const chatbotImage = document.getElementById("chatbot-image");
 
 function appendMessage(message, sender) {
     const messageDiv = document.createElement("div");

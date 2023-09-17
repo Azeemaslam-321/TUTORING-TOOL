@@ -112,3 +112,24 @@ a {
 a:hover {
     text-decoration: underline;
 }
+/* Style for the chatbot icon */
+.chatbot-icon {
+    position: fixed; /* Fixed position so it stays in place when scrolling */
+    bottom: 20px; /* Adjust this value to set the distance from the bottom */
+    right: 20px; /* Adjust this value to set the distance from the right */
+    /* background-color: #007BFF; Background color for the chatbot icon */
+    color: #fff; /* Icon color */
+    border-radius: 50%; /* Make it circular */
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Adjust the size as needed */
+    text-align: center;
+    line-height: 50px; /* Center the icon vertically */
+    cursor: pointer; /* Add a pointer cursor for interaction */
+    z-index: 999; /* Ensure it appears above other elements */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a shadow */
+}
+
+/* Style for the chatbot icon when hovered */
+.chatbot-icon:hover {
+    background-color: #181818; 
+}

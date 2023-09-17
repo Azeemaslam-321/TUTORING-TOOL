@@ -15,6 +15,10 @@ function logout() {
     document.getElementById("logout-link").style.display = "none";
     document.getElementById("login-link").style.display = "block";
 }
+const chatbotImage = document.getElementById("chatbot-image");//
+// JavaScript for your chatbot
+
+
 
 // JavaScript code for search.html (Search Page)
 document.addEventListener('DOMContentLoaded', function () {
