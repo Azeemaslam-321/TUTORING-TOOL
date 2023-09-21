@@ -29,7 +29,7 @@ function appendMessage(message, sender) {
 
     chatHistory.appendChild(messageDiv);
 }
-
+// hello there
 const chatbotResponses = {
     "hello": "Hi there! How can I assist you today?",
     "how are you": "I'm just a chatbot, but thanks for asking!",
